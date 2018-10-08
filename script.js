@@ -1,11 +1,11 @@
 const inputs = document.querySelectorAll('section input');
 
 function atualizar(){
-  fetch("http://localhost:5000/produtos").then(resposta => resposta.json()).then(dados => construirLista(dados.produtos)).catch(erro => console.log(`ERRO: ${erro}`));
+  fetch("https://github.com/rodrigoestevan08/listadecompras1.git/produtos").then(resposta => resposta.json()).then(dados => construirLista(dados.produtos)).catch(erro => console.log(`ERRO: ${erro}`));
 }
 
 function removerItem(event){
-  fetch(`http://localhost:5000/produto/${event.target.id}`, {
+  fetch(`https://github.com/rodrigoestevan08/listadecompras1.git/produto/${event.target.id}`, {
     method: "DELETE"
   }).then(resposta => resposta.json()).then(dados => {
     console.log(dados);
@@ -48,7 +48,7 @@ document.querySelector('button').onclick = function(event){
     quantidade: Number(inputs[2].value)
   }
 
-  fetch('http://localhost:5000/produto/novo', {
+  fetch('https://github.com/rodrigoestevan08/listadecompras1.git/produto/novo', {
     method: "POST",
     body: JSON.stringify(novoProduto),
     headers:{

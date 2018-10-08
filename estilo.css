@@ -1,0 +1,22 @@
+body{
+  width: 50%;
+  margin: 0 auto;
+  background: lightgray;
+}
+
+li p{
+  display: inline-block;
+}
+
+li button{
+  margin-left: 30px;
+}
+
+#novo{
+  border: 2px solid red;
+  padding: 30px;
+}
+
+#novo h3{
+  margin: 0;
+}
